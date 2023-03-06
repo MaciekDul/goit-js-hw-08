@@ -12,7 +12,32 @@ body {
   line-height: 1.5;
 }
 
+p {
+  margin-left: 40px;
+}
+
+
 img {
   display: block;
   max-width: 100%;
+}
+
+.imit{list-style: none;}
+
+
+.imitationButton{
+
+  
+  background-color: hsl(59, 72%, 76%);
+  box-shadow: 3px 3px hsl(79, 72%, 66%), -1em 0 .5em olive;
+  border: 1px solid hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 0%);
+  padding: 2px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 14px;
+  line-height: 3;
+  
+
+  
 }

@@ -1,10 +1,9 @@
-// Add imports above this line
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+// // // Add imports above this line
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-console.log(galleryItems);
 console.log(galleryItems);
 const galleryContainer = document.querySelector('.gallery');
 const cardsMarkup = createColorCardsMarkup(galleryItems);
@@ -14,36 +13,33 @@ galleryContainer.addEventListener('click', onGalleryContainerClick);
 
 function createColorCardsMarkup(galleryItems) {
   return galleryItems
-    .map(({ preview, original, description }) => {
+    .map(({preview, original, description }) => {
       return `
       <a class="gallery__item" href="${original}">
       <img class="gallery__image" src="${preview}"
        alt="${description}" />
-    </a> `;
-    })
-    .join('');
+    </a> `;}).join('');
 }
 
 var lightbox = new SimpleLightbox('.gallery a', {
-  captions: true,
-  captionsData: 'alt',
-  captionPosition: 'bottom',
-  captionDelay: 250,
+    captions: true,
+    captionsData:"alt",
+    captionPosition:'bottom',
+    captionDelay: 250,
 });
-console.log(lightbox);
+console.log(lightbox)
 
 function onGalleryContainerClick(evt) {
-  evt.preventDefault();
-  const isColorSwatchEl = evt.target.classList.contains('gallery__image');
-  if (!isColorSwatchEl) {
-    return;
-  }
-
-  window.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      instance.close();
+    evt.preventDefault();
+    const isColorSwatchEl = evt.target.classList.contains('gallery__image');
+    if (!isColorSwatchEl) {
+      return;
     }
-  });
-}
 
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+      instance.close();};
+})
+}
+  
 console.log(galleryItems);
